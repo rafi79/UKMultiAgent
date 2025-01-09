@@ -1,9 +1,17 @@
+import os
+import sys
 import streamlit as st
 import pandas as pd
 from PIL import Image
 import io
 import base64
 from tempfile import NamedTemporaryFile
+
+# Add the repository root to the Python path
+repo_root = os.path.dirname(os.path.abspath(__file__))
+if repo_root not in sys.path:
+    sys.path.append(repo_root)
+
 from garage_service_agent import GarageServiceAgent  # This imports your existing code
 
 # Set page configuration
